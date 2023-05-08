@@ -1,0 +1,52 @@
+/*
+ * IG : i_am_bnkt
+ */
+import java.awt.GridLayout;
+import java.awt.TextField;
+import javax.swing.*;
+
+/**
+ *
+ * @author BNKT
+ */
+public class CalculatorOneGUI {
+    
+    private JFrame fr;
+    private TextField text1;
+    private TextField text2;
+    private TextField text3;
+    private JPanel panel;
+    private JButton btn1;
+    private JButton btn2;
+    private JButton btn3;
+    private JButton btn4;
+    
+    public CalculatorOneGUI() {
+        fr = new JFrame("เครื่องคิดเลข");
+        text1 = new TextField();
+        text2 = new TextField();
+        text3 = new TextField();
+        panel = new JPanel();
+        btn1 = new JButton("บวก");
+        btn2 = new JButton("ลบ");
+        btn3 = new JButton("คูณ");
+        btn4 = new JButton("หาร");
+        
+        fr.setLayout(new GridLayout(4, 0));
+        
+        fr.add(text1);
+        fr.add(text2);
+        
+        panel.add(btn1);
+        panel.add(btn2);
+        panel.add(btn3);
+        panel.add(btn4);
+        
+        fr.add(panel);
+        fr.add(text3);
+        
+        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        fr.pack();
+        fr.setVisible(true);
+    }
+}
